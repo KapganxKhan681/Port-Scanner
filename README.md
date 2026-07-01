@@ -19,8 +19,8 @@ A highly optimized, multi-threaded network security tool developed in Python. De
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git](https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git)
-cd YOUR_REPO_NAME
+git clone https://github.com/KapganxKhan681/Port-Scanner.git
+cd Port-Scanner
 ```
 
 2. Run the scanner:
@@ -47,8 +47,8 @@ Python ile geliştirilmiş, yüksek düzeyde optimize edilmiş ve çoklu iş par
 
 1. Depoyu bilgisayarınıza indirin:
 ```bash
-git clone [https://github.com/KULLANICI_ADINIZ/DEPO_ADINIZ.git](https://github.com/KULLANICI_ADINIZ/DEPO_ADINIZ.git)
-cd DEPO_ADINIZ
+git clone https://github.com/KapganxKhan681/Port-Scanner.git
+cd Port-Scanner
 ```
 
 2. Tarayıcıyı çalıştırın:
