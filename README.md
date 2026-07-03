@@ -1,68 +1,79 @@
-# 📡 Advanced Network Port Scanner & Banner Grabber
+# 📡 Advanced Port Scanner & Banner Grabber (CLI & GUI)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python Badge">
-  <img src="https://img.shields.io/badge/Security-Networking-red?style=for-the-badge" alt="Security Badge">
-  <img src="https://img.shields.io/badge/Status-Completed-success?style=for-the-badge" alt="Status Badge">
-</div>
+![Python](https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python)
+![Security](https://img.shields.io/badge/Security-Red_Team-red?style=for-the-badge&logo=hackthebox)
+![Status](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
 
 ## 🌍 English
-A highly optimized, multi-threaded network security tool developed in Python. Designed for rapid port discovery and service identification, this CLI-based application emulates core Nmap functionalities. It leverages concurrent execution for high-speed scanning and implements banner grabbing to identify active services behind open ports.
+
+A highly optimized, multi-threaded network security tool developed in Python. Designed for rapid port discovery and reconnaissance, this repository features both a lightweight **Command Line Interface (CLI)** and a modern **Graphical User Interface (GUI)** version. 
 
 ### 🚀 Technical Features
-* **Multi-Threading Architecture:** Utilizes `concurrent.futures.ThreadPoolExecutor` to scan ports concurrently, drastically reducing execution time (e.g., scanning 1024 ports drops from ~8 minutes to ~11 seconds).
-* **CLI Integration:** Fully controllable via terminal arguments using the `argparse` library, allowing dynamic target and port range assignments.
-* **Banner Grabbing:** Employs socket data retrieval (`recv`) to extract and display service banners, providing crucial reconnaissance data.
-* **Robust Exception Handling:** Features layered `try-except` blocks to handle DNS resolution failures (`socket.gaierror`) and graceful exits on user interrupts (`KeyboardInterrupt`).
+* **Multi-Threading Architecture:** Utilizes `concurrent.futures.ThreadPoolExecutor` to scan ports concurrently, drastically reducing execution time.
+* **Modern GUI Engine:** Includes a sleek, dark-mode user interface powered by `customtkinter`, preventing GUI-freezes using background `threading`.
+* **Banner Grabbing (CLI):** Employs socket data retrieval (`recv`) to extract service banners in the terminal version.
+* **Robust Exception Handling:** Features layered `try-except` blocks to handle timeouts, DNS resolution failures, and prevents spam-clicking in the GUI.
 
 ### 💻 Installation & Usage
 
-1. Clone the repository:
-```bash
-git clone https://github.com/KapganxKhan681/Port-Scanner.git
-cd Port-Scanner
-```
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/KapganxKhan681/Port-Scanner.git](https://github.com/KapganxKhan681/Port-Scanner.git)
+   cd Port-Scanner
+   ```
 
-2. Run the scanner:
-```bash
-# Scan default standard ports (1-1024)
-python port_scanner.py -t scanme.nmap.org
+2. **Install GUI requirements (Only needed for the GUI version):**
+   ```bash
+   pip install customtkinter
+   ```
 
-# Scan a specific custom port range
-python port_scanner.py -t scanme.nmap.org -p 20-80
-```
+3. **Run the tools:**
+   * **For Terminal (CLI) Version:**
+     ```bash
+     python port_scanner.py -t scanme.nmap.org -p 20-80
+     ```
+   * **For Interface (GUI) Version:**
+     ```bash
+     python gui_port_scanner.py
+     ```
 
 ---
 
-## 🇹🇷 Türkçe
-Python ile geliştirilmiş, yüksek düzeyde optimize edilmiş ve çoklu iş parçacığı (multi-threading) destekli bir ağ güvenliği aracıdır. Hızlı port keşfi ve servis tespiti için tasarlanan bu CLI tabanlı uygulama, Nmap'in temel işlevlerini simüle eder. Yüksek hızlı tarama için eşzamanlı yürütme mimarisini kullanır ve açık portların arkasındaki aktif servisleri belirlemek için "banner grabbing" işlemi uygular.
+## TR Türkçe
+
+Python ile geliştirilmiş, yüksek düzeyde optimize edilmiş ve çoklu iş parçacığı (multi-threading) destekli bir ağ güvenliği aracıdır. Hızlı port keşfi için tasarlanan bu depo, hem hafif bir **Terminal (CLI)** hem de modern bir **Arayüz (GUI)** versiyonu içerir.
 
 ### 🚀 Teknik Özellikler
-* **Çoklu İş Parçacığı (Multi-Threading):** Portları eşzamanlı olarak taramak için `ThreadPoolExecutor` kullanır ve çalışma süresini büyük ölçüde azaltır (Örn: 1024 port taraması ~8 dakikadan ~11 saniyeye düşer).
-* **CLI Entegrasyonu:** `argparse` kütüphanesi sayesinde tamamen terminal argümanları üzerinden kontrol edilebilir; dinamik hedef ve aralık atamasına olanak tanır.
-* **Banner Grabbing:** Kritik keşif verilerini sağlamak amacıyla servis karşılama metinlerini yakalamak ve görüntülemek için soket veri alımını (`recv`) kullanır.
-* **Kapsamlı Hata Yönetimi:** DNS çözümleme hatalarını yönetmek ve kullanıcı kesintilerinde programı güvenle sonlandırmak için katmanlı `try-except` blokları içerir.
+* **Çoklu İş Parçacığı (Multi-Threading):** Portları eşzamanlı olarak taramak için `ThreadPoolExecutor` kullanır ve çalışma süresini büyük ölçüde azaltır.
+* **Modern Arayüz Motoru:** `customtkinter` ile güçlendirilmiş koyu temalı bir arayüz sunar. Arka plan `threading` yapısı sayesinde arayüz donmalarını (GUI-freeze) engeller.
+* **Banner Grabbing (CLI):** Terminal versiyonunda kritik keşif verilerini sağlamak amacıyla servis karşılama metinlerini yakalamak için `recv` kullanır.
+* **Kapsamlı Hata Yönetimi:** Zaman aşımlarını ve DNS çözüme hatalarını güvenle atlatır; arayüzde spam tıklamaları önleyici güvenlik mekanizmasına sahiptir.
 
 ### 💻 Kurulum ve Kullanım
 
-1. Depoyu bilgisayarınıza indirin:
-```bash
-git clone https://github.com/KapganxKhan681/Port-Scanner.git
-cd Port-Scanner
-```
+1. **Depoyu bilgisayarınıza indirin:**
+   ```bash
+   git clone [https://github.com/KapganxKhan681/Port-Scanner.git](https://github.com/KapganxKhan681/Port-Scanner.git)
+   cd Port-Scanner
+   ```
 
-2. Tarayıcıyı çalıştırın:
-```bash
-# Varsayılan standart portları (1-1024) taramak için
-python port_scanner.py -t scanme.nmap.org
+2. **Arayüz gereksinimlerini kurun (Sadece GUI versiyonu için):**
+   ```bash
+   pip install customtkinter
+   ```
 
-# Özel bir port aralığı taramak için
-python port_scanner.py -t scanme.nmap.org -p 20-80
-```
+3. **Araçları çalıştırın:**
+   * **Terminal (CLI) Versiyonu İçin:**
+     ```bash
+     python port_scanner.py -t scanme.nmap.org -p 20-80
+     ```
+   * **Arayüz (GUI) Versiyonu İçin:**
+     ```bash
+     python gui_port_scanner.py
+     ```
 
 ---
 
 ### ⚠️ Disclaimer / Yasal Uyarı
-**EN:** This tool is developed for educational purposes and authorized penetration testing only. Scanning networks or hosts without explicit written permission is strictly prohibited and illegal. The developer assumes no liability and is not responsible for any misuse or damage caused by this program.
-
-**TR:** Bu araç yalnızca eğitim amaçlı ve yetkili sızma testleri için geliştirilmiştir. Açık ve yazılı izin olmadan ağları veya sistemleri taramak kesinlikle yasaktır ve yasa dışıdır. Geliştirici, bu programın kötüye kullanılması veya neden olduğu herhangi bir zarardan sorumlu tutulamaz.
+**EN:** This tool is developed for educational purposes and authorized penetration testing only. Scanning networks or hosts without explicit written permission is strictly prohibited.
+**TR:** Bu araç yalnızca eğitim amaçlı ve yetkili sızma testleri için geliştirilmiştir. Açık izin olmadan ağları veya sistemleri taramak yasa dışıdır.
